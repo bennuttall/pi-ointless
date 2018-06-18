@@ -20,6 +20,7 @@ class PointlessSlider(Slider):
         self.team = team
         img = '{}/images/{}.png'.format(path, team)
         self.team_img = Picture(app, image=img, grid=[n, 3])
+        self.team_img.tk.grid(row=3, column=n, padx=(25, 0))
 
     def slider_changed(self, value):
         self.score.value = value
